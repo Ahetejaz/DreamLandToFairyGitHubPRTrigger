@@ -6,9 +6,8 @@
 trigger: none
 
 pr:
-  branches:
-    include:
-      - dev
+- main
+- Dev
 
 pool:
   vmImage: ubuntu-latest
