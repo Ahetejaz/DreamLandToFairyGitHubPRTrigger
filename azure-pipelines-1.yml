@@ -1,0 +1,20 @@
+name: PR-Validation-$(Build.BuildId)
+
+trigger: none  # Prevent pipeline from triggering on push
+
+pr:
+  branches:
+    include:
+      - dev  # Run pipeline only if PR is targeting 'dev' branch
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'
