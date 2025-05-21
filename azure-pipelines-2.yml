@@ -6,8 +6,11 @@
 trigger: none
 
 pr:
-- main
-- Dev
+  branches: # Branch names to include or exclude for triggering a run.
+    include: 
+    - main
+    - Dev
+  drafts: false # Whether to start a run when a draft PR is created. Default: true.
 
 pool:
   vmImage: ubuntu-latest
